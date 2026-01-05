@@ -1,6 +1,6 @@
 {
   "name": "pnpm-workspace-sort",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A CLI to sort catalog dependencies and packages in pnpm-workspace.yaml",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
