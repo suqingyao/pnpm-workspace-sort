@@ -1,0 +1,43 @@
+{
+  "name": "pnpm-workspace-sort",
+  "version": "0.0.0",
+  "description": "A CLI to sort catalog dependencies and packages in pnpm-workspace.yaml",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "pnpm-workspace-sort": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "release": "release-it",
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "keywords": [
+    "pnpm",
+    "workspace",
+    "sort",
+    "cli"
+  ],
+  "author": "suqingyao",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suqingyao/pnpm-workspace-sort.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^25.0.3",
+    "@release-it/conventional-changelog": "^10.0.0",
+    "release-it": "^18.0.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^1.0.0"
+  }
+}
