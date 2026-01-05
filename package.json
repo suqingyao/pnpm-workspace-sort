@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "pnpm-workspace-sort": "./dist/cli.js"
+    "pnpm-workspace-sort": "dist/cli.js"
   },
   "files": [
     "dist"
@@ -25,7 +25,7 @@
   "author": "suqingyao",
   "repository": {
     "type": "git",
-    "url": "https://github.com/suqingyao/pnpm-workspace-sort.git"
+    "url": "git+https://github.com/suqingyao/pnpm-workspace-sort.git"
   },
   "license": "MIT",
   "dependencies": {
