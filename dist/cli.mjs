@@ -49,11 +49,13 @@ function sortWorkspaceData(doc) {
 }
 
 // src/cli.ts
-var WORKSPACE_FILE = "pnpm-workspace.yaml";
+var DEFAULT_WORKSPACE_FILE = "pnpm-workspace.yaml";
 function run() {
-  const filePath = path.resolve(process.cwd(), WORKSPACE_FILE);
+  const args = process.argv.slice(2);
+  const targetFile = args[0] || DEFAULT_WORKSPACE_FILE;
+  const filePath = path.resolve(process.cwd(), targetFile);
   if (!fs.existsSync(filePath)) {
-    console.error(`Error: ${WORKSPACE_FILE} not found in current directory.`);
+    console.error(`Error: ${targetFile} not found in current directory.`);
     process.exit(1);
   }
   try {
@@ -74,7 +76,7 @@ function run() {
         quotingType: '"'
       });
       fs.writeFileSync(filePath, newYaml, "utf8");
-      console.log(`Successfully updated ${WORKSPACE_FILE}`);
+      console.log(`Successfully updated ${targetFile}`);
     } else {
       console.log("Already sorted. No changes made.");
     }
