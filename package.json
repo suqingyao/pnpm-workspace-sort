@@ -12,9 +12,11 @@
   ],
   "scripts": {
     "test": "vitest run",
-    "release": "changeset publish",
     "build": "tsup",
-    "dev": "tsup --watch"
+    "dev": "tsup --watch",
+    "changeset": "changeset",
+    "changeset:version": "changeset version && npm install",
+    "changeset:publish": "changeset publish"
   },
   "keywords": [
     "pnpm",
